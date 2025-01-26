@@ -1,0 +1,11 @@
+C:/greenhouse/cmake-build-default-mingw/CMakeFiles/ALL_BUILD.dir
+C:/greenhouse/cmake-build-default-mingw/CMakeFiles/ZERO_CHECK.dir
+C:/greenhouse/cmake-build-default-mingw/FREERTOS_KERNEL/CMakeFiles/ALL_BUILD.dir
+C:/greenhouse/cmake-build-default-mingw/pico-sdk/CMakeFiles/ALL_BUILD.dir
+C:/greenhouse/cmake-build-default-mingw/pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir
+C:/greenhouse/cmake-build-default-mingw/pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir
+C:/greenhouse/cmake-build-default-mingw/pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir
+C:/greenhouse/cmake-build-default-mingw/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild.dir
+C:/greenhouse/cmake-build-default-mingw/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir
+C:/greenhouse/cmake-build-default-mingw/src/CMakeFiles/greenHouse.dir
+C:/greenhouse/cmake-build-default-mingw/src/CMakeFiles/ELF2UF2Build.dir

@@ -1,0 +1,44 @@
+C:\Users\natal\AppData\Local\JetBrains\CLion2023.3\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -S /cygdrive/c/greenhouse -B /cygdrive/c/greenhouse/cmake-build-debug-cygwin
+Using PICO_SDK_PATH from environment ('C:\Pico-SDK\pico-sdk')
+PICO_SDK_PATH is /cygdrive/c/Pico-SDK/pico-sdk
+Defaulting PICO_PLATFORM to rp2040 since not specified.
+Defaulting PICO platform compiler to pico_arm_gcc since not specified.
+PICO compiler is pico_arm_gcc
+CMake Warning at /cygdrive/c/Pico-SDK/pico-sdk/cmake/preload/toolchains/find_compiler.cmake:22 (message):
+  PICO_TOOLCHAIN_PATH specified (C:\Pico-SDK\gcc-arm-none-eabi\bin), but
+  arm-none-eabi-gcc not found there
+Call Stack (most recent call first):
+  /cygdrive/c/Pico-SDK/pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake:20 (pico_find_compiler)
+  /cygdrive/c/Users/natal/AppData/Local/JetBrains/CLion2023.3/cygwin_cmake/share/cmake-3.27.8/Modules/CMakeDetermineSystem.cmake:148 (include)
+  FreeRTOS-KernelV10.6.2/portable/ThirdParty/GCC/RP2040/CMakeLists.txt:17 (project)
+
+
+CMake Warning at /cygdrive/c/Pico-SDK/pico-sdk/cmake/preload/toolchains/find_compiler.cmake:22 (message):
+  PICO_TOOLCHAIN_PATH specified (C:\Pico-SDK\gcc-arm-none-eabi\bin), but
+  arm-none-eabi-g++ not found there
+Call Stack (most recent call first):
+  /cygdrive/c/Pico-SDK/pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake:21 (pico_find_compiler)
+  /cygdrive/c/Users/natal/AppData/Local/JetBrains/CLion2023.3/cygwin_cmake/share/cmake-3.27.8/Modules/CMakeDetermineSystem.cmake:148 (include)
+  FreeRTOS-KernelV10.6.2/portable/ThirdParty/GCC/RP2040/CMakeLists.txt:17 (project)
+
+
+CMake Warning at /cygdrive/c/Pico-SDK/pico-sdk/cmake/preload/toolchains/find_compiler.cmake:22 (message):
+  PICO_TOOLCHAIN_PATH specified (C:\Pico-SDK\gcc-arm-none-eabi\bin), but
+  arm-none-eabi-objcopy not found there
+Call Stack (most recent call first):
+  /cygdrive/c/Pico-SDK/pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake:23 (pico_find_compiler)
+  /cygdrive/c/Users/natal/AppData/Local/JetBrains/CLion2023.3/cygwin_cmake/share/cmake-3.27.8/Modules/CMakeDetermineSystem.cmake:148 (include)
+  FreeRTOS-KernelV10.6.2/portable/ThirdParty/GCC/RP2040/CMakeLists.txt:17 (project)
+
+
+CMake Warning at /cygdrive/c/Pico-SDK/pico-sdk/cmake/preload/toolchains/find_compiler.cmake:22 (message):
+  PICO_TOOLCHAIN_PATH specified (C:\Pico-SDK\gcc-arm-none-eabi\bin), but
+  arm-none-eabi-objdump not found there
+Call Stack (most recent call first):
+  /cygdrive/c/Pico-SDK/pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake:24 (pico_find_compiler)
+  /cygdrive/c/Users/natal/AppData/Local/JetBrains/CLion2023.3/cygwin_cmake/share/cmake-3.27.8/Modules/CMakeDetermineSystem.cmake:148 (include)
+  FreeRTOS-KernelV10.6.2/portable/ThirdParty/GCC/RP2040/CMakeLists.txt:17 (project)
+
+
+CMake Error: CMake was unable to find a build program corresponding to "Unix Makefiles".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.
+-- Configuring incomplete, errors occurred!

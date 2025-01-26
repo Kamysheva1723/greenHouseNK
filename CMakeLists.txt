@@ -7,7 +7,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(PICO_BOARD pico_w)
 
 # Name project
-SET(ProjectName rp2040-freertos-irq)
+SET(ProjectName greenHouse)
 
 # Set any variables required for importing libraries
 SET(FREERTOS_KERNEL_PATH ${CMAKE_CURRENT_SOURCE_DIR}/FreeRTOS-KernelV10.6.2)
@@ -30,3 +30,23 @@ add_subdirectory(src)
 # file to the "lib" directory
 #add_subdirectory(lib)
 
+target_include_directories(greenHouse
+        PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/src"
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/systemTasks"
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/sensors"
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/FanDriver"
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/ValveDriver"
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/UI"
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/cloud"
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/controller"
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/FanDriver"
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/EEPROM"
+
+)
+
+set(CMAKE_SYSTEM_NAME Generic)
+
+
+set(CMAKE_C_COMPILER arm-none-eabi-gcc)
+set(CMAKE_CXX_COMPILER arm-none-eabi-g++)

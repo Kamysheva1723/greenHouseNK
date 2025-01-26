@@ -1,0 +1,19 @@
+# CMake generation dependency list for this directory.
+C:/Pico-SDK/pico-sdk/CMakeLists.txt
+C:/Pico-SDK/pico-sdk/pico_sdk_init.cmake
+C:/Pico-SDK/pico-sdk/src/common/pico_base/generate_config_header.cmake
+C:/Pico-SDK/pico-sdk/src/common/pico_base/include/pico/version.h.in
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeASMCompiler.cmake.in
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeASMInformation.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCompilerIdDetection.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineASMCompiler.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompiler.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindBinUtils.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestASMCompiler.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-ASM.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-FindBinUtils.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake
+C:/greenhouse/FreeRTOS-KernelV10.6.2/portable/ThirdParty/GCC/RP2040/library.cmake
+C:/greenhouse/cmake-build-default-mingw/CMakeFiles/3.27.8/CMakeASMCompiler.cmake

@@ -1,0 +1,167 @@
+{
+	"backtrace" : 6,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"ExternalProject_Add",
+			"find_package",
+			"_pico_init_pioasm",
+			"pico_generate_pio_header"
+		],
+		"files" : 
+		[
+			"C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/ExternalProject.cmake",
+			"C:/Pico-SDK/pico-sdk/tools/FindPioasm.cmake",
+			"C:/Pico-SDK/pico-sdk/tools/CMakeLists.txt",
+			"C:/Pico-SDK/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 50,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 17,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 10,
+				"parent" : 2
+			},
+			{
+				"file" : 1,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 27,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 4129,
+				"parent" : 5
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "ExternalProjectTargets/PioasmBuild"
+	},
+	"id" : "PioasmBuild::@c2fb4f534018e64680d5",
+	"name" : "PioasmBuild",
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/rp2_common/pico_cyw43_driver",
+		"source" : "C:/Pico-SDK/pico-sdk/src/rp2_common/pico_cyw43_driver"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 6,
+			"isGenerated" : true,
+			"path" : "cmake-build-default-mingw/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-default-mingw/CMakeFiles/2bd84a5537089adccf7e21c3514748d1/PioasmBuild.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-default-mingw/CMakeFiles/5a5d2d08d76c57c2d8212ca9ca500a2e/PioasmBuild-complete.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-build.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-configure.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-download.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-install.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-mkdir.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-patch.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-update.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

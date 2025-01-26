@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/Pico-SDK/pico-sdk/src/rp2_common/boot_stage2/CMakeLists.txt
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/FindPython/Support.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/FindPython3.cmake

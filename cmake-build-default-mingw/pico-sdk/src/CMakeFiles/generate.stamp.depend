@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+C:/Pico-SDK/pico-sdk/src/CMakeLists.txt
+C:/Pico-SDK/pico-sdk/src/board_setup.cmake
+C:/Pico-SDK/pico-sdk/src/boards/generic_board.cmake
+C:/Pico-SDK/pico-sdk/src/boards/pico_w.cmake
+C:/Pico-SDK/pico-sdk/src/rp2040.cmake
+C:/Pico-SDK/pico-sdk/src/rp2_common.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeASMInformation.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-ASM.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake

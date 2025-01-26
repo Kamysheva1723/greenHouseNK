@@ -1,0 +1,5 @@
+# CMake generation dependency list for this directory.
+C:/Pico-SDK/pico-sdk/docs/CMakeLists.txt
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/FindDoxygen.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake

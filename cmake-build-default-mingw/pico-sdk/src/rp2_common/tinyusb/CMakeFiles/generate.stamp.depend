@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Pico-SDK/pico-sdk/lib/tinyusb/hw/bsp/family_support.cmake
+C:/Pico-SDK/pico-sdk/lib/tinyusb/hw/bsp/rp2040/boards/pico_sdk/board.cmake
+C:/Pico-SDK/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.cmake
+C:/Pico-SDK/pico-sdk/lib/tinyusb/hw/bsp/rp2040/pico_sdk_import.cmake
+C:/Pico-SDK/pico-sdk/pico_sdk_init.cmake
+C:/Pico-SDK/pico-sdk/src/rp2_common/tinyusb/CMakeLists.txt
+C:/Users/natal/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakePrintHelpers.cmake

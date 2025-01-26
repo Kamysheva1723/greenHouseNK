@@ -1,5 +1,5 @@
 add_executable(${ProjectName}
-        main.cpp
+        main_original.cpp
         critical_section.cpp
         Fmutex.cpp
         Fmutex.h

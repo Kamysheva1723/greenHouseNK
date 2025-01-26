@@ -1,0 +1,13 @@
+# Target labels
+ PioasmBuild
+# Source files and their labels
+C:/greenhouse/cmake-build-default-mingw/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild
+C:/greenhouse/cmake-build-default-mingw/CMakeFiles/2bd84a5537089adccf7e21c3514748d1/PioasmBuild.rule
+C:/greenhouse/cmake-build-default-mingw/CMakeFiles/5a5d2d08d76c57c2d8212ca9ca500a2e/PioasmBuild-complete.rule
+C:/greenhouse/cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-build.rule
+C:/greenhouse/cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-configure.rule
+C:/greenhouse/cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-download.rule
+C:/greenhouse/cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-install.rule
+C:/greenhouse/cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-mkdir.rule
+C:/greenhouse/cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-patch.rule
+C:/greenhouse/cmake-build-default-mingw/CMakeFiles/3ef4655f8b35c25e1013fa97304c5960/PioasmBuild-update.rule

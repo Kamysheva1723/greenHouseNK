@@ -1,0 +1,12 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/cygdrive/c/Users/natal/AppData/Local/JetBrains/CLion2023.3/cygwin_cmake/share/cmake-3.27.8/Modules/CMakeDetermineSystem.cmake:206 (message)"
+      - "FreeRTOS-KernelV10.6.2/portable/ThirdParty/GCC/RP2040/CMakeLists.txt:17 (project)"
+    message: |
+      The target system is: PICO -  - cortex-m0plus
+      The host system is: CYGWIN - 3.5.3-1.x86_64 - x86_64
+...
