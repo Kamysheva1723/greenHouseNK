@@ -28,8 +28,8 @@ private:
     static int32_t uart_transport_read(uint8_t *buf, uint16_t count, int32_t byte_timeout_ms, void *arg);
 
     std::shared_ptr<PicoOsUart> uart;
-    nmbs_platform_conf platform_conf;
-    nmbs_t nmbs;
+    nmbs_platform_conf platform_conf{};
+    nmbs_t nmbs{};
 };
 
 

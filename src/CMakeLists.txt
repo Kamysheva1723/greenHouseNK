@@ -1,13 +1,15 @@
+# Find the libcurl package
+
 add_executable(${ProjectName}
-        main_original.cpp
+
         critical_section.cpp
         Fmutex.cpp
         Fmutex.h
-        blinker.cpp
-        blinker.h
+        #blinker.cpp
+        #blinker.h
 
-#        ipstack/IPStack.cpp
-#        ipstack/IPStack.h
+        ipstack/IPStack.cpp
+        ipstack/IPStack.h
         ipstack/lwipopts.h
         ipstack/tls_common.c
         ipstack/picow_tls_client.c
@@ -30,19 +32,38 @@ add_executable(${ProjectName}
         display/framebuf.h
         display/mono_vlsb.cpp
         display/mono_vlsb.h
-#        display/ssd1306.cpp
-#        display/ssd1306.h
+        display/ssd1306.cpp
+        display/ssd1306.h
         display/ssd1306os.h
         display/ssd1306os.cpp
+
+        sensors/ISensor.cpp
+        main.cpp
+        systemTasks/systemTasks.cpp
+        sensors/ISensor.cpp
+        FanDriver/FanDriver.cpp
+        ValveDriver/ValveDriver.cpp
+        Controller/Controller.cpp
+        EEPROM/EEPROMStorage.cpp
+        cloud/cloud.cpp
+        UI/ui.cpp
+        sensors/CO2Sensor.cpp
+        sensors/TempRHSensor.cpp
+        sensors/PressureSensor.cpp
+
+
+
 )
 
 target_include_directories(${ProjectName} PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}
+        ${CMAKE_CURRENT_LIST_DIR}
         modbus
         uart
         i2c
         display
         ipstack
+        EEPROM
+
 )
 
 target_compile_definitions(${ProjectName} PRIVATE
@@ -52,7 +73,7 @@ target_compile_definitions(${ProjectName} PRIVATE
         PICO_CYW43_ARCH_DEFAULT_COUNTRY_CODE=CYW43_COUNTRY_FINLAND
 )
 
-target_link_libraries(${ProjectName} 
+target_link_libraries(${ProjectName}
         pico_stdlib
         hardware_i2c
         FreeRTOS-Kernel-Heap4
@@ -69,8 +90,11 @@ set_source_files_properties(
         COMPILE_OPTIONS "-Wno-unused-result"
 )
 
+
+
 pico_add_extra_outputs(${ProjectName})
 
 # Disable usb output, enable uart output
 pico_enable_stdio_usb(${PROJECT_NAME} 0)
 pico_enable_stdio_uart(${PROJECT_NAME} 1)
+

@@ -1,28 +1,18 @@
-//
-// Created by natal on 26.1.2025.
-//
-
-#ifndef GREENHOUSE_VALVEDRIVER_H
-#define GREENHOUSE_VALVEDRIVER_H
+#ifndef VALVE_DRIVER_H
+#define VALVE_DRIVER_H
 
 #include <cstdint>
+#include <cstdio>
 
-/**
- * @brief Simple class controlling the solenoid valve (CO2 injection) via a GPIO pin.
- */
 class ValveDriver {
 public:
     ValveDriver(uint gpioPin);
-    ~ValveDriver() = default;
-
     void openValve();
     void closeValve();
-
-    bool isOpen() const { return valveOpen_; }
-
+    bool isOpen() const;
 private:
-    uint pin_;
-    bool valveOpen_;
+    uint pin;
+    bool valveOpen;
 };
 
-#endif //GREENHOUSE_VALVEDRIVER_H
+#endif // VALVE_DRIVER_H

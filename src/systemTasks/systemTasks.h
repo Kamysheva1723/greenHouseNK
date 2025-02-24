@@ -1,13 +1,20 @@
-//
-// Created by natal on 26.1.2025.
-//
+#ifndef SYSTEM_TASKS_H
+#define SYSTEM_TASKS_H
 
-#ifndef GREENHOUSE_SYSTEMTASK_H
-#define GREENHOUSE_SYSTEMTASK_H
+#include <cstdint>
 
-void sensorTask(void *param);
-void controlTask(void *param);
-void uiTask(void *param);
-void cloudTask(void *param);
+struct InitDataStruct;
 
-#endif //GREENHOUSE_SYSTEMTASK_H
+// Existing tasks:
+void initTask(void* param);
+void sensorTask(void* param);
+void controlTask(void* param);
+void uiTask(void* param);
+void eepromTask(void* param);
+void rotaryEventTask(void *param);
+
+// NEW: The cloud task prototype
+void cloudTask(void* param);
+
+#endif // SYSTEM_TASKS_H
+

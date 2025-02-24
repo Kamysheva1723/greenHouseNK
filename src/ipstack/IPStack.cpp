@@ -14,6 +14,10 @@
 
 
 IPStack::IPStack(const char *ssid, const char *pw) : tcp_pcb{nullptr}, dropped{0}, count{0}, wr{0}, rd{0}, connected{false} {
+
+
+
+
     if (cyw43_arch_init()) {
         DEBUG_printf("failed to initialise\n");
         return;

@@ -1,51 +1,52 @@
-//
-// Created by natal on 26.1.2025.
-//
+#ifndef UI_H
+#define UI_H
 
-#ifndef GREENHOUSE_UI_H
-#define GREENHOUSE_UI_H
-
-#include <cstdint>
 #include <memory>
-#include <string>
+#include <cstdint>
 
-class ssd1306os;   // from your driver
-class EEPROMStorage;
+// Forward declarations
+class ssd1306os;
 class Controller;
 
 /**
- * @brief Manages local user interface:
- *  - Displays sensor readings & set-point
- *  - Handles rotary input to change set-point
- *  - Saves settings to EEPROM
+ * @brief UI class handles displaying sensor values and adjusting the CO₂ setpoint
+ *        via a rotary encoder (turn + press).
  */
 class UI {
 public:
     UI(std::shared_ptr<ssd1306os> display,
-       std::shared_ptr<EEPROMStorage> eeprom,
        std::shared_ptr<Controller> controller);
 
     /**
-     * @brief Periodically update display & check for user input.
+     * @brief Called periodically (e.g. every 200ms) to refresh the display.
      */
     void updateUI();
 
-    // Additional UI states or menu logic
-    void showMainScreen();
-    void showMenuScreen();
-
-    // Called by an ISR or polled to handle encoder changes
+    /**
+     * @brief Called when the rotary encoder is turned.
+     * @param delta +1 for clockwise, -1 for counterclockwise
+     */
     void onEncoderTurn(int delta);
+
+    /**
+     * @brief Called when the rotary encoder button is pressed.
+     */
     void onButtonPress();
 
-private:
-    std::shared_ptr<ssd1306os>    display_;
-    std::shared_ptr<EEPROMStorage> eeprom_;
-    std::shared_ptr<Controller>    controller_;
+    /**
+     * @brief Optionally set a starting local setpoint from elsewhere
+     */
+    void setLocalSetpoint(float sp);
 
-    // Track UI state
-    float localCO2Setpoint_;
-    bool  editingSetpoint_;
+
+private:
+    std::shared_ptr<ssd1306os> display_;
+    std::shared_ptr<Controller> controller_;
+
+    float localCO2Setpoint_;  // UI's working copy of the setpoint
+    bool editingSetpoint_;    // Are we currently editing the setpoint?
+    int  savedMessageTimer_;  // Countdown to show "Saved" message after user saves
 };
 
-#endif //GREENHOUSE_UI_H
+#endif // UI_H
+

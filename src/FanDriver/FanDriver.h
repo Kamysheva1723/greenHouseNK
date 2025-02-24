@@ -1,37 +1,34 @@
-//
-// Created by natal on 26.1.2025.
-//
+#pragma once
 
-#ifndef GREENHOUSE_FUNDRIVER_H
-#define GREENHOUSE_FUNDRIVER_H
-
-#include <cstdint>
 #include <memory>
+#include <cstdint>
 
-class PicoOsUart;
+class ModbusRegister;
 
 /**
- * @brief Interface to control fan speed (0–100%) via MIO 12‐V over Modbus.
+ * A simple fan driver that writes a 0..1000 value (0-100% speed)
+ * to a specific Modbus holding register.
  */
 class FanDriver {
 public:
-    FanDriver(std::shared_ptr<PicoOsUart> uart, uint8_t modbusAddress);
-    ~FanDriver() = default;
+    /**
+     * @param fanRegister  The ModbusRegister object pointing
+     *                     to the holding register for fan speed.
+     */
+    FanDriver(std::shared_ptr<ModbusRegister> fanRegister);
 
     /**
-     * @brief Set the fan speed from 0–100%.
+     * Sets the fan speed in percent [0..100].
      */
     void setFanSpeed(float percent);
 
     /**
-     * @brief Optional: read back fan pulse count or speed if needed.
+     * Returns the last set fan speed in percent.
      */
-    float getFanSpeed() const { return currentSpeed_; }
+    float getCurrentSpeed() const;
 
 private:
-    std::shared_ptr<PicoOsUart> uart_;
-    uint8_t address_;
-    float currentSpeed_; // 0–100
+    std::shared_ptr<ModbusRegister> fanReg_;  ///< The Modbus register for fan speed
+    float currentSpeed_;                      ///< Cached last speed in percent
 };
 
-#endif //GREENHOUSE_FUNDRIVER_H

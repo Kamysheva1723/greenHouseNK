@@ -135,7 +135,13 @@ uint PicoI2C::transaction(uint8_t addr, const uint8_t *wbuffer, uint wlength, ui
     assert((wbuffer && wlength > 0) || (rbuffer && rlength > 0));
     std::lock_guard<Fmutex> exclusive(access);
     task_to_notify = xTaskGetCurrentTaskHandle();
+    if (task_to_notify == NULL) {
+        printf("PicoI2C::transaction: ERROR: Called outside of a valid task context! (xTaskGetCurrentTaskHandle() returned NULL)\n");
+    } else {
 
+        //printf("PicoI2C::transaction: Task %p, name: %s, addr: 0x%02X, wlength: %u, rlength: %u\n",
+               //task_to_notify, pcTaskGetName(task_to_notify), addr, wlength, rlength);
+    }
     i2c->hw->enable = 0;
     i2c->hw->tar = addr;
     i2c->hw->enable = 1;

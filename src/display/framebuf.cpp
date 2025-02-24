@@ -121,6 +121,7 @@ void framebuf::text(const std::string &str, uint16_t x, uint16_t y, uint32_t col
 }
 
 void framebuf::text(const char *str, uint16_t x, uint16_t y, uint32_t color) {
+
     // loop over chars
     for (; *str; ++str) {
         // get char and make sure its in range of font

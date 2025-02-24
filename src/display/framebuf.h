@@ -19,6 +19,7 @@ public:
     void rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint32_t color, bool fill = false);
     void text(const char *str, uint16_t x, uint16_t y, uint32_t color = 1);
     void text(const std::string &str, uint16_t x, uint16_t y, uint32_t color = 1);
+
     void blit(framebuf &fb, int16_t x, int16_t y, uint32_t key = 0xFFFF, const framebuf *palette = nullptr);
     void scroll(int16_t xstep, int16_t ystep);
 private:
