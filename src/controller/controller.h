@@ -2,6 +2,7 @@
 #define CONTROLLER_H
 
 #include <memory>
+#include "timers.h"
 
 class CO2Sensor;
 class TempRHSensor;
@@ -38,7 +39,8 @@ private:
     std::shared_ptr<ValveDriver> valve;
     std::shared_ptr<EEPROMStorage> eepromStorage;
 
-    TimerHandle_t valveTimer;
+    TimerHandle_t valveTimer = nullptr;
+    static void valveTimerCallback(TimerHandle_t xTimer);
 
     float co2Setpoint;
     float currentCO2;
