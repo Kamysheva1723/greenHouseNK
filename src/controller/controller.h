@@ -2,6 +2,7 @@
 #define CONTROLLER_H
 
 #include <memory>
+#include "FreeRTOS.h"
 #include "timers.h"
 
 class CO2Sensor;
