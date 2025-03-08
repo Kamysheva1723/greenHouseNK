@@ -39,10 +39,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "rot/GpioEvent.h"
-//#define WIFI_SSID "Koti_2951"
-//#define WIFI_PASSWORD "GD34L8GHD4KYT"
-#define WIFI_SSID "AndroidAP6AF5"
-#define WIFI_PASSWORD "ojbd8927"
+
 
 
 
