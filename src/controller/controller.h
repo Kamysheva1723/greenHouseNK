@@ -36,7 +36,9 @@ private:
     std::shared_ptr<PressureSensor> presSensor;
     std::shared_ptr<FanDriver> fan;
     std::shared_ptr<ValveDriver> valve;
-    std::shared_ptr<EEPROMStorage> eepromStorage; // new member
+    std::shared_ptr<EEPROMStorage> eepromStorage;
+
+    TimerHandle_t valveTimer;
 
     float co2Setpoint;
     float currentCO2;
