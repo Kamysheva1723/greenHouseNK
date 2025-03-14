@@ -1,0 +1,166 @@
+@startuml
+
+enum EventType {
+  PRESS
+  TURN
+}
+
+class GpioEvent {
+  +GpioEvent()
+  +GpioEvent(EventType t, bool cw, uint32_t ts)
+  +EventType type
+  +bool clockwise
+  +int32_t timestamp
+}
+
+interface ISensor {
+  +bool readSensor()
+  +~ISensor()
+}
+
+class CO2Sensor {
+  +CO2Sensor(\
+shared_ptr<ModbusRegister> co2LowReg, \
+shared_ptr<ModbusRegister> deviceStatusReg, \
+shared_ptr<ModbusRegister> co2StatusReg\
+)
+  +float cetCO2ppm()
+  +float getValue()
+
+  -shared_ptr<ModbusRegister> co2LowReg
+  -shared_ptr<ModbusRegister> deviceStatusReg
+  -shared_ptr<ModbusRegister> co2StatusReg
+  -float co2ppm
+}
+
+class PressureSensor {
+  +PressureSensor(\
+shared_ptr<PicoI2C> my_i2c, \
+uint8_t i2cAddress, \
+float altitude_m, }
+bool useCrc\
+)
+  +float getValue()
+  +float getPressurePa()
+
+  -shared_ptr<PicoI2C> my_i2c
+  -unsigned int8_t i2c_address
+  -float pressurePa
+  -float altitude_m
+  -bool useCrc
+  -float approximateAmbientPressure(float altitude_m)
+  -bool checkCrc8(unsigned int8_t msb, unsigned int8_t lsb, unsigned int8_t crcByte)
+}
+
+class TempRHSensor {
+  +TempRHSensor(\
+shared_ptr<ModbusRegister> tempReg, \
+shared_ptr<ModbusRegister> rhReg, \
+shared_ptr<ModbusRegister> trhErrorReg\
+)
+  +float getTemperature()
+  +float getHumidity()
+
+  -shared_ptr<ModbusRegister> tempReg
+  -shared_ptr<ModbusRegister> rhReg
+  -shared_ptr<ModbusRegister> trhErrorReg
+  -float temperature
+  -float humidity
+}
+
+class Controller {
+  +void Controller\
+(\
+shared_ptr<CO2Sensor> co2, \
+shared_ptr<TempRHSensor> thr, \
+shared_ptr<PressureSensor> pres, \
+shared_ptr<FanDriver> fan, \
+shared_ptr<ValveDriver> valve, \
+shared_ptr<EEPROMStorage> eepromStorage\
+)
+  +void updateControl()
+  +void setCO2Setpoint(float setpoint)
+  +float getCO2Setpoint()
+  +float getCurrentCO2()
+  +float getCurrentTemp()
+  +float getCurrentRH()
+  +float getCurrentPressure()
+  +float getCurrentFanSpeed()
+  +bool isValveOpen()
+  +bool safetyVent
+
+  -shared_ptr<CO2Sensor> co2Sensor
+  -shared_ptr<TempRHSensor> thrSensor
+  -shared_ptr<PressureSensor> presSensor
+  -shared_ptr<FanDriver> fan
+  -shared_ptr<ValveDriver> valve
+  -shared_ptr<EEPROMStorage> eepromStorage
+  -TimerHandle_t valveTimer
+  -static void valveTimerCallback(TimerHandle_t xTimer)
+  -float co2Setpoint
+  -float currentCO2
+  -float currentTemp
+  -float currentRH
+  -float currentPressure
+  -float currentFanSpeed
+}
+
+class FanDriver {
+  +FanDriver(shared_ptr<ModbusRegister> fanRegister)
+  +void setFanSpeed(float percent)
+  +float getCurrentSpeed()
+
+  -shared_ptr<ModbusRegister> fanRegister
+  -float currentSpeed
+}
+
+class ValveDriver {
+  +ValveDriver(unsigned int gpioPin)
+  +void openValve()
+  +void closeValve()
+  +bool isOpen()
+
+  -unsigned int pin
+  -bool valveOpen
+}
+
+class UI {
+  +UI(shared_ptr<ssd106os> display, shared_ptr<Controller> controller)
+  +void updateUI()
+  +void onEncoderTurn()
+  +void onButtonPress()
+  +void setLocalSetpoint()
+
+  -shared_ptr<ssd1306os> display
+  -shared_ptr<Controller> controller
+  -float localCO2Setpoint
+  -bool editingSetpoint
+  -int savedMessageTimer
+}
+
+class Cloud {
+  +Cloud(Controller* controller)
+  +~Cloud()
+  +bool updateSensorData()
+
+  -Controller* controller
+  -struct ltcp_tls_config* tls_config
+  -string performTLSRequest(const char* server, const char request*, int timeout)
+  -void parseAndPrintSetpoint(const std::string& response)
+
+  -struct TLS_CLIENT_T
+  -static err_t tlsClientClose(TLS_CLIENT_T* state)
+  -static err_t tlsClientConnected(void* arg, struct altcp_pcb* pcb, err_t err)
+  -static err_t tlsClientPoll(void* arg, struct altcp_pcb* pcb)
+  -static void tlsClientErr(void* arg, err_t err)
+  -static err_t tlsClientRecv(void* arg, struct altcp_pcb* pcb, struct pbuf* p, err_t err)
+  -static void tlsClientConnectToServerIp(const ip_addr_t* ipaddr, TLS_CLIENT_T* state)
+  -static void tlsClientDnsFound(const char* hostname, const ip_addr_t *ipaddr, void *arg)
+  -static bool tlsClientOpen(const char* hostname, TLS_CLIENT_T* state)
+}
+
+CO2Sensor <|.. ISensor
+PressureSensor <|.. ISensor
+TempRHSensor <|.. ISensor
+
+@enduml
