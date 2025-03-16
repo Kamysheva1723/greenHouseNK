@@ -2,7 +2,7 @@
 
 **Version:** 1.0.0  
 **Last Updated:** February 23, 2025  
-**Author:** Natal
+
 
 ---
 
