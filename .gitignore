@@ -1,5 +1,8 @@
-cmake-build-debug
-build
+# Ignore build files
+build/*
+.cache
+cmake-*
+
 .DS_Store
 .idea
 src/.env

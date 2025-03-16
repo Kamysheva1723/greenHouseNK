@@ -1,9 +1,9 @@
-# rp2040-freertos-CPP-template
+# Greenhouse monitor
+A project to monitor & control the carbon dioxide level in a greenhouse.
 
-This is a template project for developing FreeRTOS based applications on Raspberry Pi RP2040 based boards. 
-This template uses the "official" RP2040 port from the Raspberry Pi Foundation.
-A stripped down version of FreeRTOSKernel V10.6.2 is included in the project. 
-All other ports except RP2040 port have been removed to reduce disk usage.
+## Usage
+Sensor output can be seen on the display in a human readable format.
 
-The drivers included in the project are interrupt driven and require FreeRTOS to work correctly.
-
+The system tries to keep the carbon dioxide levels at a certain level, this target concentration can be modified.
+To set the target CO2 level, press the rotary encoder down. Then rotate it until the display shows the desired level.
+To save this new target, press the rotary encoder down again.

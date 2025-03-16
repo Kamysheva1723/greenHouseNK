@@ -9,16 +9,28 @@
    in the project documentation.
 */
 
+
 // Rotary Encoder Pin Definitions:
 // These pins are used by the rotary encoder for user input on setting the CO₂ setpoint.
 #define ROT_A_PIN   10   // Pin for rotary encoder signal A (primary quadrature signal)
 #define ROT_B_PIN   11   // Pin for rotary encoder signal B (used to determine rotation direction)
 #define ROT_SW_PIN  12   // Pin for the rotary encoder push-button (with internal pull-up enabled)
 
+#ifndef MAIN_H
+#define MAIN_H
+
+#define ROT_A_PIN   10
+#define ROT_B_PIN   11
+#define ROT_SW_PIN  12
+// Define hardware pins and addresses:
+#define EEPROM_DEVICE_ADDRESS 0x50  // 7-bit EEPROM address
+
+
 // EEPROM Configuration:
 // The external EEPROM, which is used to persist critical parameters (e.g., CO₂ setpoint),
 // is connected on I2C bus 0.
 #define EEPROM_DEVICE_ADDRESS 0x50  // 7-bit I2C address of the EEPROM module
+
 
 // I2C0 Bus Pins for EEPROM:
 // These pins are dedicated to the EEPROM module, ensuring non-volatile storage of settings.
@@ -30,3 +42,17 @@
 // display for UI feedback and the pressure sensor used for environmental monitoring.
 #define I2C1_SDA_PIN 14    // Pin used for I²C1 data line (SDA) for display and pressure sensor communication
 #define I2C1_SCL_PIN 15    // Pin used for I²C1 clock line (SCL) for display and pressure sensor communication
+
+// Wireless network
+#ifdef WIFI_SSID
+  #undef WIFI_SSID
+#endif
+#define WIFI_SSID "SmartIotMQTT"
+
+#ifdef WIFI_PASSWORD
+  #undef WIFI_PASSWORD
+#endif
+#define WIFI_PASSWORD "SmartIot"
+
+#endif
+
