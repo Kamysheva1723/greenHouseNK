@@ -304,7 +304,7 @@
 #endif
 
 #ifndef configUSE_TIMERS
-    #define configUSE_TIMERS    0
+    #define configUSE_TIMERS    1
 #endif
 
 #ifndef configUSE_COUNTING_SEMAPHORES
